@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatter – A Haven for Text-Based Content</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"DM Sans"', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: '#543EE0',   
+            ink: '#111111',     
+            muted: '#626262',   
+            line: '#D0D0D0',    
+            cream: '#FFEDCC',   
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-white font-sans text-ink antialiased">
+
+  <header class="relative border-b border-line bg-white" id="home">
+    <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-3 lg:px-[72px]">
+      <a href="#home" class="text-4xl font-bold leading-[72px] text-brand lg:text-5xl">CHATTER</a>
+
+      <div class="hidden items-center gap-10 lg:flex xl:gap-[174px]">
+        <nav class="flex gap-6 text-base font-bold leading-6">
+          <a href="#home">Home</a>
+          <a href="#about">About us</a>
+          <a href="#contact">Contact</a>
+          <a href="#blogs">Blogs</a>
+        </nav>
+        <div class="flex gap-6">
+          <a href="#" class="flex h-14 w-[157px] items-center justify-center rounded-lg border border-brand px-4 py-2 text-lg font-bold transition hover:bg-brand/5">Log in</a>
+          <a href="#" class="flex h-14 w-[157px] items-center justify-center rounded-lg bg-brand px-4 py-2 text-lg font-bold text-white transition hover:opacity-90">Sign up</a>
+        </div>
+      </div>
+
+      <button id="menu-btn" type="button" class="rounded-lg border border-line p-2 lg:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-line px-6 py-4 lg:hidden">
+      <nav class="flex flex-col gap-4 font-bold">
+        <a href="#home">Home</a>
+        <a href="#about">About us</a>
+        <a href="#contact">Contact</a>
+        <a href="#blogs">Blogs</a>
+      </nav>
+      <div class="mt-4 flex gap-4">
+        <a href="#" class="flex h-12 flex-1 items-center justify-center rounded-lg border border-brand font-bold">Log in</a>
+        <a href="#" class="flex h-12 flex-1 items-center justify-center rounded-lg bg-brand font-bold text-white">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+  
+    <section class="relative bg-[url('images/hero.jpg')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-black/55"></div>
+
+      <div class="relative mx-auto flex min-h-[560px] max-w-[984px] flex-col justify-center gap-9 px-6 py-24 text-white lg:min-h-[764px] lg:px-0">
+        <div class="flex flex-col gap-6">
+          <h1 class="text-4xl font-bold leading-tight md:text-5xl md:leading-[72px]">Welcome to Chatter: A Haven for Text-Based Content</h1>
+          <p class="max-w-[740px] text-xl font-medium leading-9 md:text-2xl">Unleash the Power of Words, Connect with Like-minded Readers and Writers</p>
+        </div>
+        <a href="#" class="flex h-14 w-[157px] items-center justify-center rounded-lg bg-brand px-4 py-2 text-lg font-bold text-white transition hover:opacity-90">Get started</a>
+      </div>
+    </section>
+
+    <section id="about" class="px-6 py-24">
+      <div class="mx-auto flex max-w-[1296px] flex-col gap-10 lg:flex-row lg:gap-[84px]">
+        <div class="flex flex-col justify-center gap-[34px] lg:w-[686px] lg:shrink-0">
+          <h2 class="text-4xl font-bold leading-tight md:text-5xl md:leading-[72px]">About Chatter</h2>
+          <p class="text-lg leading-[27px]">Chatter is a multi-functional platform where authors and readers can have access to their own content. It aims to be a traditional bookworm’s heaven and a blog to get access to more text based content. Our vision is to foster an inclusive and vibrant community where diversity is celebrated. We encourage open-mindedness and respect for all individuals, regardless of their backgrounds or beliefs. By promoting dialogue and understanding, we strive</p>
+        </div>
+
+        <img src="images/about.jpg" alt="People reading in a bright library" class="h-[300px] w-full rounded-lg bg-slate-200 object-cover lg:h-[404px] lg:w-[500px] lg:shrink-0" />
+      </div>
+    </section>
+
+    <section class="px-6 pb-24">
+      <div class="mx-auto flex max-w-[1040px] flex-col gap-[54px]">
+        <div class="flex flex-col items-center gap-6">
+          <h2 class="text-center text-4xl font-bold leading-tight md:text-5xl md:leading-[72px]">Why you should join chatter</h2>
+          <p class="text-lg leading-[27px]">Our goal is to make writers and readers see our platform as their next heaven for blogging, ensuring ease in interactions, connecting with like-minded peers, have access to favorite content based on interests and able to communicate your great ideas with people</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3 lg:gap-12">
+
+          <article class="flex min-h-[324px] flex-col gap-3 rounded-lg border border-line px-[18px] py-[15px]">
+            <span class="flex h-[88px] w-[92px] items-center justify-center rounded-full bg-[#F5F3FF]">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18" /><polyline points="7 16 11 11 14 14 20 7" /></svg>
+            </span>
+            <h3 class="text-2xl font-medium leading-9">Analytics</h3>
+            <p class="text-lg leading-[27px] text-muted">Analytics to track the number of views, likes and comment and also analyze the performance of your articles over a period of time</p>
+          </article>
+
+          <article class="flex min-h-[324px] flex-col gap-3 rounded-lg border border-line px-[18px] py-[15px]">
+            <span class="flex h-[88px] w-[92px] items-center justify-center rounded-full bg-[#F5F3FF]">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="12" r="3" /><path d="M12 11a4 4 0 0 1 4 4v3H8v-3a4 4 0 0 1 4-4z" /></svg>
+            </span>
+            <h3 class="text-2xl font-medium leading-9">Social interactions</h3>
+            <p class="text-lg leading-[27px] text-muted">Users on the platform can interact with posts they like, comment and engage in discussions</p>
+          </article>
+
+          <article class="flex min-h-[324px] flex-col gap-3 rounded-lg border border-line px-[18px] py-[15px]">
+            <span class="flex h-[88px] w-[92px] items-center justify-center rounded-full bg-[#F5F3FF]">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1" /><line x1="7" y1="8" x2="17" y2="8" /><line x1="7" y1="12" x2="12" y2="12" /><rect x="13" y="11" width="4" height="6" /><line x1="7" y1="16" x2="12" y2="16" /></svg>
+            </span>
+            <h3 class="text-2xl font-medium leading-9">Content creation</h3>
+            <p class="text-lg leading-[27px] text-muted">Write nice and appealing with our in-built markdown, a rich text editor</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream/50 px-6 py-16 lg:py-[93px]">
+      <div class="mx-auto flex max-w-[1330px] flex-col items-center gap-10 lg:flex-row lg:gap-[26px]">
+        <img src="images/testimonial.jpg" alt="Adebobola Muhydeen" class="h-[240px] w-[240px] shrink-0 rounded-full bg-slate-200 object-cover lg:h-[300px] lg:w-[300px] lg:ml-4" />
+        <div class="flex max-w-[924px] flex-col items-start gap-6 lg:ml-[60px]">
+          <div class="flex flex-col gap-12">
+            <p class="text-lg leading-[27px]">"Chatter has become an integral part of my online experience. As a user of this incredible blogging platform, I have discovered a vibrant community of individuals who are passionate about sharing their ideas and engaging in thoughtful discussions.”</p>
+            <p><span class="text-2xl font-medium leading-9">Adebobola Muhydeen,</span> <span class="text-lg">Software developer at Apple</span></p>
+          </div>
+          <a href="#" class="flex h-14 w-[157px] items-center justify-center rounded-lg bg-brand px-4 py-2 text-lg font-bold text-white transition hover:opacity-90">Join chatter</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-24">
+      <div class="mx-auto flex max-w-[1127px] flex-col items-center gap-12 lg:flex-row lg:gap-[120px]">
+      
+        <div class="flex shrink-0 items-center gap-11">
+          <div class="flex flex-col gap-24">
+            <img src="images/avatar-1.jpg" alt="Chatter user" class="h-[100px] w-[100px] rounded-full bg-slate-200 object-cover sm:h-[154px] sm:w-[154px]" />
+            <img src="images/avatar-3.jpg" alt="Chatter user" class="h-[100px] w-[100px] rounded-full bg-slate-200 object-cover sm:h-[154px] sm:w-[154px]" />
+          </div>
+          <img src="images/avatar-2.jpg" alt="Chatter user" class="h-[100px] w-[100px] rounded-full bg-slate-200 object-cover sm:h-[154px] sm:w-[154px]" />
+        </div>
+        <div class="flex flex-col items-start gap-8">
+          <div class="flex flex-col gap-6">
+            <h2 class="max-w-[655px] text-4xl font-bold leading-tight md:text-5xl md:leading-[72px]">Write, read and connect with great minds on chatter</h2>
+            <p class="max-w-[594px] text-lg leading-[27px]">Share people your great ideas, and also read write-ups based on your interests. connect with people of same interests and goals</p>
+          </div>
+          <a href="#" class="flex h-14 w-[157px] items-center justify-center rounded-lg bg-brand px-4 py-2 text-lg font-bold text-white transition hover:opacity-90">Get started</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="bg-cream/50">
+    <div class="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-[60px] lg:flex-row lg:justify-between lg:px-20">
+      <p class="text-4xl font-bold leading-[72px] text-brand lg:mt-3 lg:text-5xl">CHATTER</p>
+
+      <div class="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-3 lg:gap-x-[120px]">
+        <div>
+          <h4 class="mb-7 text-2xl font-medium leading-9">Explore</h4>
+          <ul class="flex flex-col gap-4 text-lg leading-[27px]">
+            <li><a href="#">community</a></li>
+            <li><a href="#">Trending blogs</a></li>
+            <li><a href="#">Chatter for teams</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-7 text-2xl font-medium leading-9">Support</h4>
+          <ul class="flex flex-col gap-4 text-lg leading-[27px]">
+            <li><a href="#">Support docs</a></li>
+            <li><a href="#">Join slack</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div id="blogs">
+          <h4 class="mb-7 text-2xl font-medium leading-9">Official blog</h4>
+          <ul class="flex flex-col gap-4 text-lg leading-[27px]">
+            <li><a href="#">Official blog</a></li>
+            <li><a href="#">Engineering blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
